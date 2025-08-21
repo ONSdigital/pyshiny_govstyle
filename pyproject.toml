@@ -1,0 +1,29 @@
+[project]
+name = "pyshinygovstyle"
+description = "A placeholder description for your python project"
+version = "0.0.1"
+authors = [
+    {"name" = "ONS"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+    "pyyaml"
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",
+    "myst-parser",
+    "pytest",
+    "python-dotenv",
+    "toml"
+]
+
+[tool.setuptools]
+zip-safe = false
