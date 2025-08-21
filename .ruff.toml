@@ -1,0 +1,32 @@
+line-length = 88
+
+[lint]
+select = [
+    "A",
+    "B",
+    "C4",
+    "COM",
+    "D",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "ISC",
+    "N",
+    "NPY",
+    "PD",
+    "PT",
+    "PTH",
+    "Q",
+    "T10",
+    "T20",
+    "W",
+    "YTT",
+]
+ignore = ["N812", "PD901", "E712", "E721"]
+
+[lint.pydocstyle]
+convention = "numpy"
+
+[lint.flake8-quotes]
+inline-quotes = "double"

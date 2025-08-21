@@ -10,17 +10,21 @@ classifiers = [
     "Programming Language :: Python :: 3.12"
 ]
 dependencies = [
-    "pyyaml",
-    "shiny"
+    "pyyaml>=6.0.1",
+    "shiny>=1.4.0",
 ]
 
 [project.optional-dependencies]
 dev = [
+    "black>=24.4.2",
     "coverage",
+    "isort>=5.13.2",
     "myst-parser",
+    "pre-commit>=2.6.0",
     "pytest",
     "python-dotenv",
-    "toml"
+    "ruff>=0.0.270",
+    "tomli"
 ]
 
 [tool.setuptools]
