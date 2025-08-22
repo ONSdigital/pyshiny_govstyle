@@ -1,6 +1,6 @@
 [project]
 name = "pyshinygovstyle"
-description = "A placeholder description for your python project"
+description = "Government Design System stylings for Shiny for Python"
 version = "0.0.1"
 authors = [
     {"name" = "ONS"}
