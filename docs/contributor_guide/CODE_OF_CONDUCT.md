@@ -1,6 +1,6 @@
 # Code of conduct for `pyshinygovstyle`
 
-All contributors to this repository hosted by `ONS` are expected to follow the
+All contributors to this repository hosted by `ONS Digital` are expected to follow the
 Contributor Covenant Code of Conduct. Those working within HM Government are also expected to follow the [Civil Service
 Code][civil-service-code].
 
@@ -11,8 +11,8 @@ Code][civil-service-code].
 Where this Code of Conduct says:
 
 - "Project", we mean this repository `pyshinygovstyle` ;
-- "Maintainer", we mean active developers of the primary project team(s) behind `ONS`; and
-- "Leadership", we mean `ONS` organisation owners, line managers, and other
+- "Maintainer", we mean active developers of the primary project team(s) behind `ONS Digital`; and
+- "Leadership", we mean `ONS Digital` organisation owners, line managers, and other
   leadership within HMG.
 
 ### Our Pledge
@@ -66,7 +66,7 @@ further defined and clarified by project leadership.
 ### Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by
-contacting the project team at [][email-address]. All complaints will be
+contacting the project team. All complaints will be
 reviewed and investigated and will result in a response that is deemed necessary and
 appropriate to the circumstances. The project team is obligated to maintain
 confidentiality with regard to the reporter of an incident. Further details of
