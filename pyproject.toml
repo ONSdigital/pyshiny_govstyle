@@ -1,28 +1,30 @@
 [project]
 name = "pyshinygovstyle"
-description = "A placeholder description for your python project"
+description = "Government Design System stylings for Shiny for Python"
 version = "0.0.1"
 authors = [
     {"name" = "ONS"}
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 classifiers = [
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12"
 ]
 dependencies = [
-    "pyyaml"
+    "pyyaml>=6.0.1",
+    "shiny>=1.4.0",
 ]
 
 [project.optional-dependencies]
 dev = [
+    "black>=24.4.2",
     "coverage",
+    "isort>=5.13.2",
     "myst-parser",
+    "pre-commit>=2.6.0",
     "pytest",
     "python-dotenv",
-    "toml"
+    "ruff>=0.0.270",
+    "tomli"
 ]
 
 [tool.setuptools]
