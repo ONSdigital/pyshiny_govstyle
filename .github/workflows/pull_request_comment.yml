@@ -26,13 +26,12 @@ jobs:
             cat code_review_template.md
             echo EOF
           } >> "$GITHUB_ENV"
-      - run: env
-    #   - uses: actions/github-script@v6
-    #     with:
-    #       script: |
-    #         github.rest.issues.createComment({
-    #           issue_number: context.issue.number,
-    #           owner: context.repo.owner,
-    #           repo: context.repo.repo,
-    #           body: process.env.comment_body
-    #         })
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: process.env.comment_body
+            })
