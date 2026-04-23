@@ -18,7 +18,7 @@ jobs:
     
     steps:
       - name: create comment string
-        run: cd ${{ github.workspace }} && env.comment_body=$(cat ${{ env.comment_file }})
+        run: cd ${{ github.workspace }} && echo "comment_body=$(cat ${{ env.comment_file }})" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v4
       - uses: actions/github-script@v6
@@ -28,5 +28,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: env.comment_body
+              body: process.env.comment_body
             })
