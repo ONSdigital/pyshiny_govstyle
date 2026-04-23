@@ -21,16 +21,16 @@ jobs:
         run: |
             cd ${{ github.workspace }} 
             echo $(ls) 
-            # echo "comment_body=$(cat ../${{ env.comment_file }})" >> $GITHUB_ENV 
-            # echo ${{ env.comment_body }}
-      - name: Checkout
-        uses: actions/checkout@v4
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: process.env.comment_body
-            })
+    # echo "comment_body=$(cat ../${{ env.comment_file }})" >> $GITHUB_ENV 
+    # echo ${{ env.comment_body }}
+    #   - name: Checkout
+    #     uses: actions/checkout@v4
+    #   - uses: actions/github-script@v6
+    #     with:
+    #       script: |
+    #         github.rest.issues.createComment({
+    #           issue_number: context.issue.number,
+    #           owner: context.repo.owner,
+    #           repo: context.repo.repo,
+    #           body: process.env.comment_body
+    #         })
