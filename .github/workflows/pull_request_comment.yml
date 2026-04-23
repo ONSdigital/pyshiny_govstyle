@@ -19,7 +19,7 @@ jobs:
     steps:
       - run: pwd
       - name: create comment string
-        run: ls ..
+        run: ls -a .
     # echo "comment_body=$(cat ../${{ env.comment_file }})" >> $GITHUB_ENV 
     # echo ${{ env.comment_body }}
     #   - name: Checkout
