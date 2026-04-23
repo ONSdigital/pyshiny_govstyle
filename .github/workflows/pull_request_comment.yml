@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name: create comment string
-        run: /
+        run: |
           echo "comment_body=$(cat ${{ env.comment_file }})" >> $GITHUB_ENV 
           echo ${{ env.comment_body }}
     #   - uses: actions/github-script@v6
