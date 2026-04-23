@@ -1,6 +1,4 @@
 
-When reviewing this pull request, please tick off the below criteria as appropriate:
-
 ##  Code review
 
 #### Documentation
