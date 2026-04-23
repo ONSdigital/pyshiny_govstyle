@@ -1,0 +1,37 @@
+name: "auto review comment"
+
+env:
+  comment_file: code_review_template.md
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  comment-in-pr:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+      id-token: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: create comment string
+        run: |
+          {
+            echo 'comment_body<<EOF'
+            cat code_review_template.md
+            echo EOF
+          } >> "$GITHUB_ENV"
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: process.env.comment_body
+            })
