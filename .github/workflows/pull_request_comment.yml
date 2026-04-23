@@ -22,7 +22,7 @@ jobs:
       - name: create comment string
         run: |
           {
-            echo 'comment_body<<<br/>'
+            echo 'comment_body<<EOF'
             cat ${{ env.comment_file }}
             echo EOF
           } >> "$GITHUB_ENV"
