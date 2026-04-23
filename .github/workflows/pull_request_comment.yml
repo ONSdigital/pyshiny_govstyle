@@ -20,7 +20,7 @@ jobs:
       - name: create comment string
         run: |
             cd ${{ github.workspace }} 
-            echo $(ls) 
+            ls
     # echo "comment_body=$(cat ../${{ env.comment_file }})" >> $GITHUB_ENV 
     # echo ${{ env.comment_body }}
     #   - name: Checkout
