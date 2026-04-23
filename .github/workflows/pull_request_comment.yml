@@ -1,0 +1,65 @@
+name: "auto review comment"
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  comment-in-pr:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+      id-token: write
+    
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '
+                ##  Code review
+
+                #### Documentation
+
+                Any new code includes all the following forms of documentation:
+
+                - [ ] **Function Documentation** as docstrings within the function definition.
+                - [ ] **Examples** demonstrating major functionality, which runs successfully locally.
+
+                #### Functionality
+
+                - [ ] **Continuous Integration**: Build of the code succeeds.
+                - [ ] **Functionality**: Any functional claims of new code have been confirmed.
+                - [ ] **Automated tests**: Unit tests cover essential functions for a reasonable range
+                of inputs and conditions. All tests pass on your local machine and in Gitlab CI. 
+                - [ ] **Functional tests**: Where unit tests are not possible, functional testing processes
+                are described.
+                - [ ] **Packaging guidelines**: New code conforms to the project contribution
+                guidelines.
+                ---
+
+                ### Review comments
+
+                Please also leave review comments as appropriate.
+
+                These might include, but not exclusively:
+
+                - bugs that need fixing (does it work as expected? and does it work with other code that it is likely to interact with?)
+                - alternative methods (could it be written more efficiently or with more clarity?)
+                - documentation improvements (does the documentation reflect how the code actually works?)
+                - additional tests that should be implemented (do the tests effectively assure that it  works correctly?)
+                - code style improvements (could the code be written more clearly?)
+
+                Your suggestions should be tailored to the code that you are reviewing.
+                Be critical and clear, but not mean. Ask questions and set actions.
+              '
+            })
