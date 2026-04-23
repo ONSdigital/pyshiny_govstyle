@@ -17,6 +17,7 @@ jobs:
       id-token: write
     
     steps:
+      - run: pwd
       - name: create comment string
         run: ls
     # echo "comment_body=$(cat ../${{ env.comment_file }})" >> $GITHUB_ENV 
