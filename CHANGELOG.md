@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - GOV.UK frontend v6.0.0 CSS, JS, fonts and icons added 
+- Added pull request template with review checklist
 
 ### Fixed
 
