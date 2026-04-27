@@ -29,10 +29,7 @@ ignore = ["N812", "PD901", "E712", "E721"]
 "*/__init__.py" = ["D104"]
 
 [lint.pydocstyle]
-convention = "numpy"
+convention = "google"
 
 [lint.flake8-quotes]
 inline-quotes = "double"
-
-[tool.ruff.lint.pydocstyle]
-convention = "google"
